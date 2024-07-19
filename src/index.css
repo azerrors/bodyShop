@@ -1,0 +1,166 @@
+body {
+  font-family: "Roboto";
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  place-items: center;
+  gap: 20px;
+}
+
+.wrapper {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-around;
+  min-width: 33rem;
+}
+
+.first-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 23px;
+  width: 15rem;
+}
+
+.first-column span {
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  color: #004750;
+  margin-bottom: -8px;
+  font-size: 2.4rem;
+  padding-top: 9px;
+  letter-spacing: 0.8px;
+}
+
+p {
+  color: #004750;
+  font-weight: 500;
+  line-height: 1.3rem;
+
+  padding-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.second-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 7px;
+  padding-bottom: 20px;
+}
+
+.date {
+  color: #004750;
+  letter-spacing: 1.2px;
+  text-align: center;
+  font-weight: 700;
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+.super {
+  background: #004750;
+  color: #fff;
+  font-weight: 400;
+  padding: 10px 18px;
+  border-radius: 20px;
+  letter-spacing: 1.2px;
+}
+
+.new-count {
+  display: flex;
+  padding-top: 5px;
+  color: #004750;
+  font-weight: 900;
+  padding-left: 7px;
+}
+
+.int {
+  font-size: 5.3rem;
+}
+
+.dec {
+  font-size: 2.5rem;
+}
+
+.iconWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.old-price-container {
+  position: relative;
+  padding-left: 5px;
+  display: inline-block;
+}
+
+.old-price-container::before {
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: 5px;
+  width: 55%;
+  height: 2px;
+  background: #535050;
+  transform: rotate(-12deg);
+  transform-origin: center;
+}
+.old {
+  color: #004750;
+  font-weight: 600;
+  padding-top: 5px;
+  letter-spacing: 1.2px;
+  padding-left: 10px;
+}
+
+.old-count {
+  position: relative;
+  color: #004750;
+  font-weight: 500;
+  font-size: 28px;
+  padding-left: 9px;
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .wrapper {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+  }
+
+  .first-column {
+    width: unset;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    width: 9rem;
+  }
+  p {
+    font-size: 0.9rem;
+    width: 8rem;
+  }
+  .date{
+    font-size: 0.8rem;
+  }
+
+  .super{
+    padding: 10px;
+  }
+  .int{
+    font-size: 5rem;
+  }
+}
