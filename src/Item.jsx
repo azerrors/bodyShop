@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { getMonth, useSeperateCount, useSeperateDate } from "./hooks";
 import { ManatIcon } from "./icon";
 
@@ -10,6 +10,9 @@ export const Item = ({ data }) => {
 
   const finalStartMonth = getMonth(startMonth);
   const finalEndMonth = getMonth(endMonth);
+
+  let trimmedOldCount = old_count.trim().replace(",", ".");
+  const countClass = trimmedOldCount > 10 ? "high-count" : "low-count";
 
   return (
     <div key={Name} className="wrapper">
@@ -34,11 +37,10 @@ export const Item = ({ data }) => {
             </div>
           </div>
         </div>
-        <div className="old-price-container">
+        <div className={`old-price-container ${countClass}`}>
           <div className="old">köhnə qiymət</div>
           <span className="old-count">
             {old_count} <ManatIcon />
-            <span className="underline" />
           </span>
         </div>
       </div>

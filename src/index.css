@@ -6,7 +6,7 @@ body {
   display: grid;
   grid-template-columns: auto auto;
   place-items: center;
-  gap: 20px;
+  /* gap: 20px; */
 }
 
 .wrapper {
@@ -62,12 +62,14 @@ p {
   padding-bottom: 8px;
 }
 .super {
-  background: #004750;
+  background-color: #004750;
   color: #fff;
   font-weight: 400;
   padding: 10px 18px;
   border-radius: 20px;
   letter-spacing: 1.2px;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
 }
 
 .new-count {
@@ -110,7 +112,18 @@ p {
   background: #535050;
   transform: rotate(-12deg);
   transform-origin: center;
+  -webkit-print-color-adjust: exact; /* Chrome, Safari */
+  color-adjust: exact;
 }
+
+.old-price-container.high-count::before {
+  width: 55%;
+}
+
+.old-price-container.low-count::before {
+  width: 45%;
+}
+
 .old {
   color: #004750;
   font-weight: 600;
@@ -153,14 +166,14 @@ p {
     font-size: 0.9rem;
     width: 8rem;
   }
-  .date{
+  .date {
     font-size: 0.8rem;
   }
 
-  .super{
+  .super {
     padding: 10px;
   }
-  .int{
+  .int {
     font-size: 5rem;
   }
 }

@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { Item } from "./Item";
-import { data } from "./data";
-// import { google } from "googleapis";
 
 export default function App() {
   const [datas, setData] = useState([]);
@@ -9,7 +7,7 @@ export default function App() {
   const apiKey = "AIzaSyDOE6MGEDwaq_d8MVhHC8Q_d9LdPHdBqA4";
   const spreadsheetId = "1nLEVB2Egh7tAqV4F14bX6VE7o52RtX20bp-N_0t8YKA";
   const sheetName = "main";
-  const range = `${sheetName}!A:G`; // Adjust the range as needed
+  const range = `${sheetName}!A:G`;
 
   // !A:G
   useEffect(() => {
@@ -21,7 +19,6 @@ export default function App() {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const result = await response.json();
-        console.log("API Response:", result);
         if (result.values) {
           const formattedData = result.values.slice(2).map((row) => ({
             ID: row[0],
