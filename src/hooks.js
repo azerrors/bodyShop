@@ -62,7 +62,7 @@ export const useSeperateCount = (new_count) => {
   const [decimalPart, setDecimalPart] = useState("");
 
   useEffect(() => {
-    const [intPart, decPart] = new_count.toString().split(",");
+    const [intPart, decPart] = new_count.toString().split(".");
     setIntegerPart(intPart);
     setDecimalPart(decPart);
   }, [new_count]);

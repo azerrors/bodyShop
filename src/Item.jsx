@@ -3,7 +3,7 @@ import { getMonth, useSeperateCount, useSeperateDate } from "./hooks";
 import { ManatIcon } from "./icon";
 
 export const Item = ({ data }) => {
-  const { Name, date, new_count, old_count, ID } = data;
+  const { Name, brand, date, description, new_count, old_count, ID } = data;
 
   const { startDay, endDay, startMonth, endMonth } = useSeperateDate(date);
   const { integerPart, decimalPart } = useSeperateCount(new_count);
@@ -11,15 +11,23 @@ export const Item = ({ data }) => {
   const finalStartMonth = getMonth(startMonth);
   const finalEndMonth = getMonth(endMonth);
 
+  console.log(date);
+
   let trimmedOldCount = old_count.trim().replace(",", ".");
-  const countClass = trimmedOldCount > 10 ? "high-count" : "low-count";
+  const countClass =
+    trimmedOldCount >= 10 && trimmedOldCount < 100
+      ? "normal-count"
+      : trimmedOldCount >= 100
+      ? "high-count"
+      : "low-count";
 
   return (
     <div key={Name} className="wrapper">
       <div className="first-column">
         <div>
-          <h1>THE BODY SHOP</h1>
-          <p>{Name}</p>
+          <h1>{brand}</h1>
+          <h2>{Name}</h2>
+          <p>{description}</p>
         </div>
         <span>SKU {ID}</span>
       </div>
@@ -40,7 +48,8 @@ export const Item = ({ data }) => {
         <div className={`old-price-container ${countClass}`}>
           <div className="old">köhnə qiymət</div>
           <span className="old-count">
-            {old_count} <ManatIcon />
+            {old_count}
+            <ManatIcon width={12} height={12} />
           </span>
         </div>
       </div>

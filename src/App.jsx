@@ -5,9 +5,9 @@ export default function App() {
   const [datas, setData] = useState([]);
 
   const apiKey = "AIzaSyDOE6MGEDwaq_d8MVhHC8Q_d9LdPHdBqA4";
-  const spreadsheetId = "1nLEVB2Egh7tAqV4F14bX6VE7o52RtX20bp-N_0t8YKA";
-  const sheetName = "main";
-  const range = `${sheetName}!A:G`;
+  const spreadsheetId = "1a8tR-hkyTyyO47X0zxQPvOcutl1Mak5jqFSqFYCzN5M";
+  const sheetName = "Sayfa1";
+  const range = `${sheetName}`;
 
   // !A:G
   useEffect(() => {
@@ -22,12 +22,13 @@ export default function App() {
         if (result.values) {
           const formattedData = result.values.slice(2).map((row) => ({
             ID: row[0],
-            Name: row[1],
-            "Əczaçı bonus": row[2],
-            old_count: row[3],
-            new_count: row[4],
-            discount: row[5],
-            date: row[6],
+            brand: row[1],
+            Name: row[2],
+            description: row[3],
+            old_count: row[4],
+            new_count: row[5],
+            discount: row[6],
+            date: row[7],
           }));
           setData(formattedData);
         } else {
