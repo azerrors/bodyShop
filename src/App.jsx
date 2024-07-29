@@ -5,8 +5,8 @@ export default function App() {
   const [datas, setData] = useState([]);
 
   const apiKey = "AIzaSyDOE6MGEDwaq_d8MVhHC8Q_d9LdPHdBqA4";
-  const spreadsheetId = "1a8tR-hkyTyyO47X0zxQPvOcutl1Mak5jqFSqFYCzN5M";
-  const sheetName = "Sayfa1";
+  const spreadsheetId = "1-auXMbF7VAOGrKrJGGNF5Pi56wV2rHCL1i66gvEh5Yg";
+  const sheetName = "pricetags";
   const range = `${sheetName}`;
 
   // !A:G
