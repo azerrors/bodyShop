@@ -11,7 +11,6 @@ export const Item = ({ data }) => {
   const finalStartMonth = getMonth(startMonth);
   const finalEndMonth = getMonth(endMonth);
 
-  console.log(date);
 
   let trimmedOldCount = old_count.trim().replace(",", ".");
   const countClass =
@@ -26,7 +25,6 @@ export const Item = ({ data }) => {
       <div className="first-column">
         <div>
           <h1>{brand}</h1>
-          <h2>{Name}</h2>
           <p>{description}</p>
         </div>
         <span>SKU {ID}</span>
@@ -41,7 +39,7 @@ export const Item = ({ data }) => {
             <span className="int">{integerPart}</span>
             <div className="iconWrapper">
               <span className="dec">{decimalPart}</span>
-              <ManatIcon />
+              <ManatIcon width={25} height={19} />
             </div>
           </div>
         </div>
@@ -49,7 +47,7 @@ export const Item = ({ data }) => {
           <div className="old">köhnə qiymət</div>
           <span className="old-count">
             {old_count}
-            <ManatIcon width={12} height={12} />
+            <ManatIcon width={15} height={16} />
           </span>
         </div>
       </div>
