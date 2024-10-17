@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 220px;
-  height: 151px;
+  height: 125px;
   padding: 0px 10px 15px 10px;
 }
 
@@ -101,11 +101,11 @@ p {
 }
 
 .int {
-  font-size: 3.6rem;
+  font-size: 2.6rem;
 }
 
 .dec {
-  font-size: 1.9rem;
+  font-size: 1.1rem;
 }
 
 .iconWrapper {
