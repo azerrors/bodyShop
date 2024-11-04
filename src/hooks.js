@@ -38,20 +38,21 @@ export const useSeperateDate = (date) => {
   const [endMonth, setEndMonth] = useState("");
 
   useEffect(() => {
-    const parts = date?.split("-");
+    if (date && date.includes("-")) {
+      const parts = date.split("-");
+      if (parts.length === 2) {
+        const [startDate, endDate] = parts;
+        const startParts = startDate.split(".");
+        const endParts = endDate.split(".");
 
-    const startParts = parts[0].split(".");
-    const endParts = parts[1].split(".");
-
-    const start = startParts[0];
-    const startM = startParts[1];
-    const end = endParts[0];
-    const endM = endParts[1];
-
-    setStartDay(start);
-    setEndDay(end);
-    setStartMonth(startM);
-    setEndMonth(endM);
+        if (startParts.length === 3 && endParts.length === 3) {
+          setStartDay(startParts[0]);
+          setStartMonth(startParts[1]);
+          setEndDay(endParts[0]);
+          setEndMonth(endParts[1]);
+        }
+      }
+    }
   }, [date]);
 
   return { startDay, endDay, startMonth, endMonth };

@@ -4,13 +4,15 @@ import { ManatIcon } from "./icon";
 
 export const Item = ({ data }) => {
   const { Name, brand, date, description, new_count, old_count, ID } = data;
+  console.log(date);
 
-  const { startDay, endDay, startMonth, endMonth } = useSeperateDate(date);
+  const { startDay, endDay, startMonth, endMonth } = useSeperateDate(
+    date && date
+  );
   const { integerPart, decimalPart } = useSeperateCount(new_count);
 
   const finalStartMonth = getMonth(startMonth);
   const finalEndMonth = getMonth(endMonth);
-
 
   let trimmedOldCount = old_count.trim().replace(",", ".");
   const countClass =
