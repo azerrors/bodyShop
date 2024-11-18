@@ -4,7 +4,6 @@ import { ManatIcon } from "./icon";
 
 export const Item = ({ data }) => {
   const { Name, brand, date, description, new_count, old_count, ID } = data;
-  console.log(date);
 
   const { startDay, endDay, startMonth, endMonth } = useSeperateDate(
     date && date
