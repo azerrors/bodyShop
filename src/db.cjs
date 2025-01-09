@@ -25,7 +25,7 @@ const sheets = google.sheets({ version: "v4", auth });
 app.get("/api/sheets", async (req, res) => {
   try {
     // ID of the Google Sheets document to read.
-    const spreadsheetId = "Vt0yuRJhrNBQiLyLB5WWBR4H3IB68vSpKxFnSIQWBxk";
+    const spreadsheetId = "1-auXMbF7VAOGrKrJGGNF5Pi56wV2rHCL1i66gvEh5Yg";
 
     // Range to read data from.
     const range = "Sheet1!A1:E10";
