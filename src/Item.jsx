@@ -26,6 +26,7 @@ export const Item = ({ data }) => {
       <div className="first-column">
         <div>
           <h1>{brand}</h1>
+          <h2 >{Name}</h2>
           <p>{description}</p>
         </div>
         <span>SKU {ID}</span>
