@@ -1,12 +1,12 @@
 body {
   font-family: "Roboto";
+  box-sizing: border-box;
 }
 
 .container {
   display: grid;
   grid-template-columns: auto auto auto;
-  
-  gap: 20px;
+  place-items: center;
 }
 
 .wrapper {
@@ -14,8 +14,8 @@ body {
   /*border: 1px solid black;*/
   display: flex;
   justify-content: space-between;
-  width: 227px;
-  height: 151px;
+  width: 184px;
+  height: 130px;
   padding: 0px 10px 15px 10px;
 }
 

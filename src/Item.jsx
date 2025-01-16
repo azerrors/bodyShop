@@ -20,6 +20,7 @@ export const Item = ({ data }) => {
       : trimmedOldCount >= 100
       ? "high-count"
       : "low-count";
+      
 
   return (
     <div key={Name} className="wrapper">

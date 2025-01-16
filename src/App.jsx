@@ -43,6 +43,10 @@ export default function App() {
     fetchData();
   }, [apiKey, spreadsheetId, range]);
 
+
+  
+
+
   return (
     <div className="container">
       {datas.map((a, index) => (
